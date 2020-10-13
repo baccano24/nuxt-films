@@ -19,6 +19,7 @@
     "sass": "^1.26.11"
   },
   "devDependencies": {
+    "@nuxtjs/proxy": "^2.0.1",
     "nodemon": "^1.18.9"
   }
 }

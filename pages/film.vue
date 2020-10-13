@@ -1,16 +1,19 @@
 <template>
   <div>
-    film
+    <ul>
+      <nuxt-link to="/film/nowplaying" tag="li" activeClass="myclass1">正在热映</nuxt-link>
+      <nuxt-link to="/film/comingsoon" tag="li" activeClass="myclass1">即将上映</nuxt-link>
+    </ul>
     <nuxt-child></nuxt-child>
   </div>
 </template>
 
 <script>
-export default {
-
-}
+export default {};
 </script>
 
-<style lang="scss" scoped>
-
+<style scoped>
+.myclass1 {
+  color: orange;
+}
 </style>

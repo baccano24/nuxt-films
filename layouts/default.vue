@@ -1,6 +1,8 @@
 <template>
   <div>
-    <nuxt />
+    <transition name="slide-fade">
+      <nuxt />
+    </transition>
     <ul class="tabbar">
       <nuxt-link to="/film" tag="li" activeClass="myclass">film</nuxt-link>
       <nuxt-link to="/center" tag="li" activeClass="myclass">center</nuxt-link>
@@ -78,5 +80,19 @@ html {
 }
 .myclass {
   color: red;
+}
+.slide-fade-enter-active {
+  transition: all 0.3s ease;
+}
+.slide-fade-leave-active {
+  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+}
+.slide-fade-enter,
+.slide-fade-leave-to {
+  transform: translateX(10px);
+  opacity: 0;
+}
+#__nuxt{
+  overflow: hidden;
 }
 </style>
